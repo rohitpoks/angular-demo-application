@@ -1,0 +1,18 @@
+<div style="text-align: center;">
+  <button type="button" (click)="get_people()" class="button_styler">Click to reveal people!</button>
+</div>
+<div style="text-align: center;">
+<ul>
+  <li *ngFor="let person of result">
+    Person: {{ person.id }}
+    <ul>
+      <li>Name: {{ person.name }}</li>
+      <li>Age: {{ person.age }}</li>
+    </ul>
+    <br> <hr>
+  </li>
+ </ul>
+</div>
+<div style="text-align: center;">
+ <button type="button" *ngIf="active" (click)="make_inactive()" class="button_styler">Collapse</button>
+</div>
